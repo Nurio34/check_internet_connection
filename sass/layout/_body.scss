@@ -1,0 +1,102 @@
+
+body {
+
+    .popUp {
+        box-shadow: 0 5px 5px -4px black;
+        width: calc(100vw - 2rem);
+        max-width: 375px;
+        padding: 1rem;
+        
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,0); 
+        transition: 0.4s;
+
+                                            &.hidden {
+                                                transform: translate(-50%,-150%);
+                                                transition-delay: 2s;
+
+                                                .icon {
+                                                    background-color: green;
+
+                                                    .slash {
+                                                        visibility: hidden;
+                                                    }
+                                                }
+
+                                                .details {
+
+                                                    .reconnectBtn {
+                                                        background-color: green;
+
+                                                        &:hover {
+                                                            background-color: lighten(green,10);
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+        .icon {
+
+            position: relative;
+            border-radius: 50%;
+            background-color: red;
+            color: white;
+            width: 2rem;
+            aspect-ratio: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-block-start: 0.3rem;
+
+            i {}
+
+            .slash {
+                width: 80%;
+                height: 2px;
+                background-color: white;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%) rotate(-45deg); 
+                // transform: rotate(45deg);
+            }
+        }
+
+        .details {
+            display: grid;
+            gap: 1rem;
+            justify-items: start;
+            align-items: center;
+
+            .reconnectBtn {
+                background-color: red;
+                color: white;
+                border: none;
+                padding: 0.3rem 0.9rem;
+                border-radius: 0.3rem;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: lighten(red,10);
+                }
+            }
+        }
+    }
+
+}
+
+body {
+
+    .gridTwoCol {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        justify-content: center;
+        align-items: start;
+        gap: 1rem;
+    }
+}
+
+
+
+
